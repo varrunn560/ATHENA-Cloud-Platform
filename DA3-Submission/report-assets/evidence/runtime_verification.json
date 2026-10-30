@@ -1,0 +1,123 @@
+{
+  "checkedAtUtc": "2026-10-30T16:28:34Z",
+  "report_summary": [
+    "Vault file listing through the local Vite proxy returned HTTP 200 with 13 entries in the response; filenames and byte sizes are recorded. This response size is not asserted to be the total bucket inventory.",
+    "Vault version history for demo/athena-test.txt returned HTTP 200 and 5 versions; download-url returned HTTP 200 with expiresIn 300 seconds. The signed URL was not stored or displayed.",
+    "A fresh-session UI check reported Vault live mode, version history, and the recovery confirmation flow loaded. A separate Sentinel UI check and persisted test-event status are documented as limited runtime evidence; test events are not evidence of genuine threats.",
+    "The local Tesseract sample completed with 16 words, 130 characters, and 91.0% engine confidence. This confidence is not benchmark accuracy; the check does not verify AWS Textract.",
+    "AWS account-side checks remain unavailable because the athena CLI profile failed authentication. CloudTrail, EventBridge, Lambda, and DynamoDB status are not checked; no resource absence is claimed."
+  ],
+  "awsMcp": {
+    "available": false,
+    "note": "No AWS search_documentation or retrieve_skill tool was exposed. Local AWS observability, serverless, DynamoDB, and messaging/EventBridge guidance was read."
+  },
+  "awsCli": {
+    "executablePresent": true,
+    "profile": "athena",
+    "region": "ap-south-1",
+    "authentication": "failed",
+    "check": "sts get-caller-identity exited nonzero",
+    "diagnostic": "Not retained; no credential output included."
+  },
+  "awsResources": {
+    "cloudTrailAthenaSentinelTrail": "not checked because AWS CLI profile authentication failed",
+    "eventBridgeAthenaSentinelConsoleSignIn": "not checked because AWS CLI profile authentication failed",
+    "eventBridgeAthenaSentinelS3AccessDenied": "not checked because AWS CLI profile authentication failed",
+    "lambdaAthenaSentinelApi": "not checked because AWS CLI profile authentication failed",
+    "lambdaAthenaSentinelHandler": "not checked because AWS CLI profile authentication failed",
+    "dynamoDbTableStatusesAndItemCounts": "not checked because AWS CLI profile authentication failed"
+  },
+  "vaultApi": {
+    "method": "Node.js fetch only; GET requests through local Vite proxy; no mutations",
+    "proxyBase": "http://127.0.0.1:5174/vault-api",
+    "upstreamHost": "w5vwnekg26.execute-api.ap-south-1.amazonaws.com",
+    "directNodeAttempt": {
+      "routes": [
+        "/api/files",
+        "/api/files/versions?key=demo/athena-test.txt",
+        "/api/files/download-url?key=demo/athena-test.txt"
+      ],
+      "result": "DNS resolution ENOTFOUND in direct Node fetch; no HTTP responses"
+    },
+    "files": {
+      "path": "/api/files",
+      "status": 200,
+      "responseEntries": 13,
+      "totalInventoryClaimed": false,
+      "records": [
+        {
+          "filename": "CAD-testing.txt",
+          "sizeBytes": 14
+        },
+        {
+          "filename": "test-ct.pdf",
+          "sizeBytes": 18
+        },
+        {
+          "filename": "test-ct.pdf",
+          "sizeBytes": 18
+        },
+        {
+          "filename": "upload-test.txt",
+          "sizeBytes": 26
+        },
+        {
+          "filename": "test-ct.pdf",
+          "sizeBytes": 18
+        },
+        {
+          "filename": "frontend-test.txt",
+          "sizeBytes": 27
+        },
+        {
+          "filename": "cors-put-test.txt",
+          "sizeBytes": 19
+        },
+        {
+          "filename": "test-upload.txt",
+          "sizeBytes": 20
+        },
+        {
+          "filename": "athena-test.txt",
+          "sizeBytes": 22
+        },
+        {
+          "filename": "CAD-testing.txt",
+          "sizeBytes": 14
+        },
+        {
+          "filename": "upload-proxy-check.txt",
+          "sizeBytes": 32
+        },
+        {
+          "filename": "test-ct.pdf",
+          "sizeBytes": 18
+        },
+        {
+          "filename": "integration-test.txt",
+          "sizeBytes": 56
+        }
+      ]
+    },
+    "versions": {
+      "path": "/api/files/versions?key=demo/athena-test.txt",
+      "status": 200,
+      "key": "demo/athena-test.txt",
+      "versionCount": 5
+    },
+    "downloadUrl": {
+      "path": "/api/files/download-url?key=demo/athena-test.txt",
+      "status": 200,
+      "key": "demo/athena-test.txt",
+      "expiresInSeconds": 300,
+      "signedUrlReturned": true,
+      "signedUrlSaved": false
+    }
+  },
+  "runtimeUiEvidence": {
+    "vault": "Task-shared fresh-session check: live mode true; version history and recovery confirmation loaded.",
+    "intellect": "Task-shared fresh-session check: local Tesseract sample completed; 16 words, 130 characters, 91.0% engine confidence.",
+    "sentinel": "Prior task-shared UI check: two stored test events; sentinel-test001 acknowledgement persisted across reload. These are test events, not verified genuine threats."
+  },
+  "safety": "No AWS mutations were attempted. This report contains no environment variables, credentials, response bodies, or signed URLs. AWS resource states not checked due profile authentication failure."
+}

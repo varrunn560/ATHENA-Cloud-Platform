@@ -1,0 +1,90 @@
+[
+  {
+    "path": "report-assets/screenshots/01-overview.png",
+    "title": "Overview dashboard",
+    "caption": "Actual overview dashboard. Initial analytics, SLA values, and recent activity are demonstration fixtures; they are not measured operational results.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:39.705Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/02-vault.png",
+    "title": "Vault dashboard",
+    "caption": "Actual Vault dashboard and upload controls. Connection state and displayed labels are visible; policy badges alone do not prove WORM compliance.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:40.095Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/03-vault-files.png",
+    "title": "Vault object catalog",
+    "caption": "Actual object catalog shown by the application. File names and sizes are runtime data when the connection banner reports live S3.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:40.325Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/04-file-upload.png",
+    "title": "File upload interface",
+    "caption": "Actual file upload interface. The displayed input validation and upload options are controls; this screenshot alone is not a successful-upload measurement.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:40.484Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/05-version-history.png",
+    "title": "Object version history",
+    "caption": "Actual version-history dialog opened against the selected object. The displayed revision list is recorded without executing a restore.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:40.964Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/06-file-recovery.png",
+    "title": "File recovery confirmation",
+    "caption": "Actual recovery confirmation for an earlier revision. Confirmation was not submitted; no rollback success is claimed.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:41.246Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/07-intellect.png",
+    "title": "Athena Intellect",
+    "caption": "Actual Intellect interface showing the Tesseract image-OCR workflow and document library. Existing preset extraction values are demonstration data, not an accuracy benchmark.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:42.355Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/08-intellect-ocr.png",
+    "title": "Image OCR execution screen",
+    "caption": "Actual screen after attempting the bundled Tesseract OCR sample. Any displayed result or error is evidence of this attempt; preset confidence values are not measured evaluation accuracy.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:44.306Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/09-sentinel-auth.png",
+    "title": "Sentinel authentication state",
+    "caption": "Actual Sentinel screen in a fresh browser session. Sign-in is required; no JWT or private browser session was copied for the report.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:44.507Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/10-settings.png",
+    "title": "Integration settings",
+    "caption": "Actual settings interface. Demo mode and backend connection controls are visible; separate service verification is required for claims beyond the banner.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:44.897Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  },
+  {
+    "path": "report-assets/screenshots/11-sentinel-demo-detail.png",
+    "title": "Sentinel event details in explicit demo mode",
+    "caption": "Actual Sentinel detail drawer using an explicitly enabled demonstration fixture. It illustrates triage controls and forensic layout and is not presented as a genuine detected incident.",
+    "description": "",
+    "capturedAt": "2026-10-30T16:27:45.691Z",
+    "source": "Actual Chromium rendering of the running localhost application"
+  }
+]

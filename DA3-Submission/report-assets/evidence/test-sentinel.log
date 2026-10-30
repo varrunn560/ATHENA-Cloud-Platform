@@ -1,0 +1,19 @@
+
+> cad-da3@0.0.0 test:sentinel
+> node scripts/verify-sentinel.mjs
+
+PASS AWS event fields and uppercase statuses map into UI values
+PASS missing Cognito session prevents unauthenticated API requests
+PASS event list uses dedicated Sentinel route and bearer token
+PASS status action uses POST and safely encodes event ID
+PASS backend failure is surfaced instead of substituting demo alerts
+PASS invalid event-list response is rejected
+PASS expired session without refresh token requires sign-in
+PASS concurrent requests refresh an expired token only once
+PASS sign-in generates PKCE, state and nonce for the registered callback
+PASS OAuth state mismatch is rejected before token exchange
+PASS React concurrent callback handling exchanges the code once
+PASS API authorization failure clears the expired session
+PASS live service failure returns no demo events and a visible error
+PASS demo events require explicit demo mode
+Verified 14 Sentinel checks.

@@ -1,0 +1,125 @@
+{
+  "scope": "Local source inspection plus requested Sentinel verification and production build. No application changes or AWS calls were made.",
+  "assessment": [
+    {
+      "module": "Sentinel",
+      "classification": "implemented and verified (source + automated checks; limited runtime evidence)",
+      "source_evidence": [
+        {
+          "path": "src/services/sentinelApi.ts",
+          "lines": "4-4, 46-71",
+          "finding": "Dedicated API base; bearer-token requests; event list/detail and POST acknowledge/investigate/resolve actions."
+        },
+        {
+          "path": "src/services/sentinelAuth.ts",
+          "lines": "1-2, 27-43, 55-139",
+          "finding": "Cognito OAuth authorization-code flow with PKCE, state/nonce/token validation, refresh, sign-out; client-side session uses sessionStorage."
+        },
+        {
+          "path": "src/services/api.ts",
+          "lines": "485-505",
+          "finding": "Explicit demo mode returns fixtures; live API errors return no sample alerts and include an error."
+        },
+        {
+          "path": "README.md",
+          "lines": "66-70",
+          "finding": "Documents dedicated Sentinel API, Cognito sign-in and limitations: live Lambda persists status changes, not notes/checklists."
+        }
+      ],
+      "verification": "npm.cmd run test:sentinel passed 14/14 checks. Test log: test-sentinel.log. It uses stubbed HTTP/Cognito responses and verifies client behavior, not AWS service health.",
+      "runtime_evidence": "Prior UI verification supplied in task context: two stored test events were displayed; sentinel-test001 remained acknowledged after reload. This is evidence of persisted test-event status, not evidence of genuine threat activity. No live request was made during this evidence-gathering task."
+    },
+    {
+      "module": "Vault",
+      "classification": "partial overall; core listing, versions, download URL, and UI history/recovery flows runtime verified; compliance/WORM behavior unverified",
+      "source_evidence": [
+        {
+          "path": "src/services/api.ts",
+          "lines": "37-53, 119-169, 173-285",
+          "finding": "Vault API base defaults to the w5vwnekg26 API; code lists files, requests upload URLs and PUTs bytes to the returned S3 URL. List failures fall back to fixture files and set isLive false."
+        },
+        {
+          "path": "src/services/api.ts",
+          "lines": "286-394",
+          "finding": "Code requests download URLs, lists versions, and sends restore requests; demo branches exist for downloads, versions, and restore."
+        },
+        {
+          "path": "src/context/AppContext.tsx",
+          "lines": "139-151, 214-317",
+          "finding": "UI context invokes live-aware file refresh, upload, download and restore service methods and exposes errors/demo state."
+        },
+        {
+          "path": "src/components/modules/vault/VaultPage.tsx",
+          "lines": "29-61, 75-86",
+          "finding": "UI has separate live and simulated-storage status; its demo copy says rollback/metadata/WORM checks simulate S3."
+        }
+      ],
+      "limitation": "AWS compliance, WORM/Object Lock, retention guarantees, and AWS account-side resource configuration remain unverified because the athena profile failed authentication. No actual restore was issued in this read-only check.",
+      "verification": "GET /api/files via local Vite proxy returned HTTP 200 with 13 entries (not asserted as full inventory); version history for demo/athena-test.txt returned HTTP 200 with 5 versions; download-url returned HTTP 200 and expiresIn 300 seconds (signed URL withheld). Task-shared UI check reported live mode, version history, and recovery confirmation loaded."
+    },
+    {
+      "module": "Intellect",
+      "classification": "local image OCR implemented and runtime verified; Textract/PDF analysis remains demo or planned in this checkout",
+      "source_evidence": [
+        {
+          "path": "src/components/modules/intellect/DocumentUploadZone.tsx",
+          "lines": "25-70, 73-101, 158-163, 286-341",
+          "finding": "Enterprise presets are tagged isDemoSample=true. Uploaded PNG/JPG/JPEG images are OCRed in-browser with Tesseract.js; PDFs are rejected by the local OCR path and image size is limited to 25 MB."
+        },
+        {
+          "path": "src/context/AppContext.tsx",
+          "lines": "321-373",
+          "finding": "Local OCR results are stored in app state; other submitted document payloads use ApiService.analyzeDocument."
+        },
+        {
+          "path": "src/services/api.ts",
+          "lines": "396-478",
+          "finding": "Document GET/analyze endpoints are labelled proposed; request failures fall back to static/sample generated Textract-like data marked demo."
+        },
+        {
+          "path": "src/components/modules/intellect/ExtractedResultsPanel.tsx",
+          "lines": "68-72, 101-122, 349-353",
+          "finding": "Panel distinguishes mock Textract sample output from Tesseract local OCR output."
+        },
+        {
+          "path": "README.md",
+          "lines": "8-9, 49-64",
+          "finding": "README describes the UI as emulating Textract/Comprehend and labels backend contracts proposed."
+        }
+      ],
+      "limitation": "No Textract call is present in the inspected local document workflow. The teammate's separately developed upstream work was not available in this checkout. OCR evidence does not verify Textract.",
+      "verification": "Task-shared fresh-session sample completed through local Tesseract with 16 words, 130 characters, and 91.0% engine confidence. Engine confidence is not benchmark accuracy."
+    },
+    {
+      "module": "Overview and other dashboard data",
+      "classification": "demo/mock unless independently backed by runtime evidence",
+      "source_evidence": [
+        {
+          "path": "src/services/api.ts",
+          "lines": "90-110",
+          "finding": "Overview returns INITIAL_OVERVIEW_METRICS when demo mode is on, the request fails, or the request returns a non-OK response."
+        },
+        {
+          "path": "src/services/demoData.ts",
+          "lines": "10, 313, 502, 808",
+          "finding": "Static fixture collections exist for Vault files, Intellect documents, Sentinel events, and overview metrics."
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "command": "npm.cmd run test:sentinel",
+      "result": "exit 0; 14 checks passed",
+      "log": "test-sentinel.log"
+    },
+    {
+      "command": "npm.cmd run build",
+      "result": "exit 0; TypeScript and Vite production build succeeded; 2656 modules transformed",
+      "log": "build.log",
+      "note": "Vite emitted a chunk-size warning for the 842.32 kB minified JS bundle."
+    }
+  ],
+  "source_vs_runtime": "Source inspection demonstrates code paths and configured endpoints. Automated Sentinel checks use controlled mocks. The only live runtime claim in this report is the prior UI verification explicitly supplied in task context, and it concerns stored test events/status persistence. No other module's AWS runtime behavior was tested here.",
+  "safety": "No application source was modified. No AWS call was made. Logs record local test/build output only."
+}

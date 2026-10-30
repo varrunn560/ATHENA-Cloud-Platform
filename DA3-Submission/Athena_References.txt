@@ -1,0 +1,40 @@
+IEEE-style references (35 verified sources)
+Access date for online sources: Oct. 30, 2026.
+
+[1] Amazon Web Services, “Download and upload objects with presigned URLs,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html
+[2] Amazon Web Services, “Retaining multiple versions of objects with S3 Versioning,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html
+[3] Amazon Web Services, “Locking objects with Object Lock,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+[4] Amazon Web Services, “RestoreObject,” Amazon S3 API Reference. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/API/API_RestoreObject.html
+[5] Amazon Web Services, “Configuring default encryption,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/default-bucket-encryption.html
+[6] Amazon Web Services, “Specifying server-side encryption with AWS KMS (SSE-KMS),” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/specifying-kms-encryption.html
+[7] Amazon Web Services, “Policies and permissions in AWS Identity and Access Management,” IAM User Guide. [Online]. Available: https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
+[8] Amazon Web Services, “Control access to HTTP APIs with JWT authorizers in API Gateway,” API Gateway Developer Guide. [Online]. Available: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-jwt-authorizer.html
+[9] Amazon Web Services, “Verifying JSON web tokens,” Amazon Cognito Developer Guide. [Online]. Available: https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
+[10] Amazon Web Services, “Understanding CloudTrail events,” AWS CloudTrail User Guide. [Online]. Available: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-events.html
+[11] Amazon Web Services, “Amazon GuardDuty events,” Amazon EventBridge Events Reference. [Online]. Available: https://docs.aws.amazon.com/eventbridge/latest/ref/events-ref-guardduty.html
+[12] Amazon Web Services, “GuardDuty S3 Protection,” Amazon GuardDuty User Guide. [Online]. Available: https://docs.aws.amazon.com/guardduty/latest/ug/s3-protection.html
+[13] Amazon Web Services, “GuardDuty S3 Protection finding types,” Amazon GuardDuty User Guide. [Online]. Available: https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html
+[14] Amazon Web Services, “DynamoDB encryption at rest,” Amazon DynamoDB Developer Guide. [Online]. Available: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html
+[15] Amazon Web Services, “Defining Lambda Event Function permissions with an execution role,” AWS Lambda Developer Guide. [Online]. Available: https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html
+[16] Amazon Web Services, “Invoke,” AWS Lambda API Reference. [Online]. Available: https://docs.aws.amazon.com/lambda/latest/api/API_Invoke.html
+[17] Amazon Web Services, “Event bus targets in Amazon EventBridge,” Amazon EventBridge User Guide. [Online]. Available: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html
+[18] React, “Quick Start,” React Documentation. [Online]. Available: https://react.dev/learn
+[19] Vite, “Getting Started,” Vite Documentation. [Online]. Available: https://vite.dev/guide/
+[20] Microsoft, “TypeScript Handbook: Introduction,” TypeScript Documentation. [Online]. Available: https://www.typescriptlang.org/docs/handbook/intro.html
+[21] Tailwind CSS, “Installing Tailwind CSS with Vite,” Tailwind CSS Documentation. [Online]. Available: https://tailwindcss.com/docs/installation/using-vite
+[22] Tesseract.js project, “Tesseract.js: Pure Javascript OCR for more than 100 Languages,” GitHub repository. [Online]. Available: https://github.com/naptha/tesseract.js
+[23] Amazon Web Services, “User pool endpoints and managed login reference,” Amazon Cognito Developer Guide. [Online]. Available: https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-userpools-server-contract-reference.html
+[24] Amazon Web Services, “Checking object integrity in Amazon S3,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html
+[25] Amazon Web Services, “Logging data events,” AWS CloudTrail User Guide. [Online]. Available: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html
+[26] Amazon Web Services, “Amazon EventBridge event patterns,” Amazon EventBridge User Guide. [Online]. Available: https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html
+[27] Amazon Web Services, “What is Amazon GuardDuty?,” Amazon GuardDuty User Guide. [Online]. Available: https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html
+[28] MDN Web Docs, “Using the Fetch API,” Mozilla. [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+[29] Amazon Web Services, “Amazon Cognito logging in AWS CloudTrail,” Amazon Cognito Developer Guide. [Online]. Available: https://docs.aws.amazon.com/cognito/latest/developerguide/logging-using-cloudtrail.html
+[30] Amazon Web Services, “Control access to REST APIs using Amazon Cognito user pools as an authorizer,” API Gateway Developer Guide. [Online]. Available: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html
+[31] Amazon Web Services, “Elements of a CORS configuration,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManageCorsUsing.html
+[32] Amazon Web Services, “Using time to live (TTL) in DynamoDB,” Amazon DynamoDB Developer Guide. [Online]. Available: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html
+[33] Amazon Web Services, “Blocking public access to your Amazon S3 storage,” Amazon S3 User Guide. [Online]. Available: https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html
+[34] P. Mell and T. Grance, “The NIST Definition of Cloud Computing,” NIST Special Publication 800-145, National Institute of Standards and Technology, Sept. 2011. doi: 10.6028/NIST.SP.800-145. [Online]. Available: https://doi.org/10.6028/NIST.SP.800-145
+[35] S. Rose, O. Borchert, S. Mitchell, and S. Connelly, “Zero Trust Architecture,” NIST Special Publication 800-207, National Institute of Standards and Technology, Aug. 2020. doi: 10.6028/NIST.SP.800-207. [Online]. Available: https://doi.org/10.6028/NIST.SP.800-207
+
+Verification note: The documentation pages and NIST publication records listed above were opened and publisher/title content checked on Oct. 30, 2026. Each source is publisher-authored primary material or an official standards publication. The bibliography has 35 verified entries; no unverified or inaccessible candidate URLs were included.

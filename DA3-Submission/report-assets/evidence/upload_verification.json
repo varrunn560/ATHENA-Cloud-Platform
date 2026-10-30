@@ -1,0 +1,6 @@
+{
+  "fixture": "DA3_upload_verification.txt",
+  "requestUrlSaved": false,
+  "restoreExecuted": false,
+  "error": "page.waitForResponse: Timeout 30000ms exceeded while waiting for event \"response\""
+}

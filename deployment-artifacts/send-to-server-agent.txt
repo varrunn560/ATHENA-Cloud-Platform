@@ -1,0 +1,17 @@
+SSH port 22 timed out before authentication; no archive reached your restricted receiver. Do not broaden SSH firewall access. Fetch the release with this private, one-hour signed HTTPS GET link instead:
+
+https://s3.ap-south-1.amazonaws.com/athena-vault-cad/deployment-artifacts/releases/athena-a4f4db82.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA6BYNPDAHAVSUPNIK%2F20261030%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20261030T045736Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGUaCmFwLXNvdXRoLTEiRzBFAiEA50UkEJr8pYFD9cAKHvIvDnjUKbGboofmbBKJZ0G0IMcCIDeLKqfFpmKL1xhIhwdLkRBEZ3m92EwyTC1W8tLobcGaKrsECC4QABoMOTY1ODU5MDIyODYyIgyrIFM9k%2FHwvfXGpjoqmAQpZqmkfBXOLLuIwJ3JW2L3y4bM7df7gt3ZGF%2Bt%2BCYdHcjOYkG5hPA63zwydDnSbpksC665orN%2F4dlOndE5V%2B9L%2FGJLCfActmqP0JmrqegajsUrtXCfvSc%2F1h1yYfmMc8WxVe89XBjFcevJ%2BZQRAQXAc6xpGlwaanUUq9syMXHXjf9TnDYdSJFx2J0IWBoK9tOC2PAp2uHgYjBUqAap8jIOdc%2FJWgmXbeWNtG42WkVq6VRK5Sfw1Tz0PBRhAB%2FGjkqAM0TNCE88vvK0QAAMmCF5euZ4i83w%2B1az%2BD0NArKtHrmLCynqCAXDatwkP8uOZEEyZUUzv98rrAPHQKy0MCQRCNgfmUp1eCYZA8gL%2BLJ6yly2S6FYeIhs3aZTx5Z%2Ba%2FHYvubYNFsPjE3qbasSX0B5ROVR1M1nRvY8iHFZmp%2B0cFUU8%2FP4xsNSSLlx5CJ5y4l%2B9%2BM7DGLLhRrFYbxMHRF6oUraVADXXZG4JxbxXjdw4sIqFZcQSdC0Blbj6fC3sPJF81Km4meftMJMLVAU%2FHx5ebvFwMoNSrh0vd1Iaqno8EctEG68etDXLrU%2BAY%2BgFjjwNvb8VcPw36%2BQlipOPFixnsTmSZj8lg0xRrWjUAypITsi0D91roQJCe%2F%2BpinePUhdiVi6s7PEs1IG3wKlV4iE5KNvI8qmW%2FKTkQbkD4k7x9Gfx%2BbiV%2FhmklG874ea8e6RVF7NBbOqITDsjZDXBjq6Ah0ddq8uFa%2FJPyYT6dAqgiOaIkLg9ZA%2B2x6ggbm4%2Fo7zF0hqz2TTLhzI2be5UKeIeaVlg3eWbs57owm9uGBS9DYk07XqJDc6BM5zJBTGvTavRRZuvkR74A%2FtH5XyhGVlR1qwlf1GnH1x%2BQzVdZiv1DuuTaGNvwpamXyDxDkDLp3wM8tHaa0cGJMClpJhnkyGkjiC%2FMpORy79QMXGMg%2BMF%2F2vvxmzXEZJ0dssGU5w84kBybcZkPnRptAXMzGGNJ%2FjOu1%2FvbOZtPpr4LQ3ybevg0v%2FJlzjQqzmEilJyrpYgSy%2B%2BFhdL0iO%2BoyhQlWFa1JF38i3C3TbjPu%2BrEF8bY1cGD%2BzXe0AYQ3CDR0a4tgkMhPHHbPBV9NFUMnJiE1AZF1tOdIRaiPAimO3z0sV3OqDee%2Fi6aFZOcHDo2kT&X-Amz-Signature=fe01aafd79cbbd3e87029dbb23fb1ec647b61d93e5cb14c5e6eb7aebd21783ff
+
+Use the link immediately; it expires one hour after creation. Keep it out of logs and do not repeat it in responses.
+
+Expected size: 920106 bytes. Expected SHA-256: A4F4DB820E36E0A86B48C8D3D719DE19E3D76CAF4FE8F467B4D20CCFF80841BC.
+
+Download to a temporary file in /home/admin/workspace/athena-dashboard-deploy/incoming. Verify full size and SHA-256. Refuse to overwrite any existing accepted archive; atomically publish as athena-production.archive only after validation.
+
+Remove only the unused temporary authorized SSH key with fingerprint SHA256:0AGne2BsmNcD/iEv1K4Us2zQ5L3PlcZYDnZqZujYcZA. Preserve all other SSH entries.
+
+Inspect archive paths and symlinks before extracting into an isolated release directory. Test the real SPA and the existing fixed Vault API/S3 proxies on 127.0.0.1:9140. Preserve Hermes management availability and existing services.
+
+Cognito callback/logout https://athena.joelalfred.me/ and Sentinel CORS origin https://athena.joelalfred.me are configured, with localhost preserved.
+
+Report staging and verification results before public cutover. Do not broaden agent permissions, disable authentication, or create an upload/admin API.
